@@ -9,15 +9,17 @@ import pathlib
 from omegaconf import OmegaConf
 
 
-def load_config(config_name: str):
+def load_config(config_name: str, rel: bool = False):
+    if rel:
+        config_filename = config_name + ".yaml"
+        return OmegaConf.load(pathlib.Path(__file__).parent.resolve() / config_filename)
+
     path = pathlib.Path(config_name)
     return OmegaConf.load(path)
 
-    # config_filename = config_name + ".yaml"
-    # return OmegaConf.load(pathlib.Path(__file__).parent.resolve() / config_filename)
 
 
-dinov2_default_config_3d = load_config("ssl3d_default_config")
+dinov2_default_config_3d = load_config("ssl3d_default_config", rel=True)
 
 
 def load_and_merge_config_3d(config_name: str | None):

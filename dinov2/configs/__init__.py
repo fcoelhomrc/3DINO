@@ -17,8 +17,11 @@ def load_config(config_name: str):
 dinov2_default_config_3d = load_config("ssl3d_default_config")
 
 
-def load_and_merge_config_3d(config_name: str):
-    default_config = OmegaConf.create(dinov2_default_config_3d)
+def load_and_merge_config_3d(config_name: str | None):
+    default_config = OmegaConf.create(dinov2_default_config_3d) 
+    if config_name is None:
+        return default_config
+    
     loaded_config = load_config(config_name)
     return OmegaConf.merge(default_config, loaded_config)
 

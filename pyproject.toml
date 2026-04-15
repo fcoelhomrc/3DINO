@@ -3,31 +3,5 @@ name = "3dino"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = [
-    "torch==2.2.2",
-    "torchvision==0.17.2",
-    "xformers==0.0.25",
-
-    "omegaconf",
-    "torchmetrics>=1.0,<1.3",
-    "fvcore",
-    "iopath",
-    "submitit",
-
-    "monai>=1.3",
-    "nibabel>=5.1",
-    "scikit-learn",
-    "torchio",
-
-    # RAPIDS (optional — see note below)
-    # "cuml-cu11",
-]
-
-[tool.uv]
-index = [
-    { name = "nvidia", url = "https://pypi.nvidia.com" },
-]
-
-[tool.uv.sources]
-# cuml-cu11 = { index = "nvidia" }
+requires-python = ">=3.13"
+dependencies = []

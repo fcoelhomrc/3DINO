@@ -4,4 +4,21 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fvcore>=0.1.5.post20221221",
+    "iopath>=0.1.10",
+    "monai>=1.5.2",
+    "nibabel>=5.4.2",
+    "omegaconf>=2.3.0",
+    "scikit-learn>=1.8.0",
+    "submitit>=1.5.4",
+    "torch>=2.11.0",
+    "torchio>=1.0.2",
+    "torchmetrics>=1.9.0",
+    "torchvision>=0.26.0",
+    "xformers>=0.0.35",
+]
+
+
+[tool.setuptools]
+py-modules = ["dinov2"]

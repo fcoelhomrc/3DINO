@@ -24,5 +24,8 @@ dependencies = [
 where = ["."]
 include = ["dinov2*"]
 
+[tool.setuptools.package-data]
+"dinov2" = ["**/*.yaml"]
+
 [tool.uv]
 package = true
